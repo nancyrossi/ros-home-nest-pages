@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROS Home Nest</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #f7f5f1;
+      --link: #0b57d0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #f2f2f2;
+        --muted: #b0b0b0;
+        --bg: #121212;
+        --link: #8ab4f8;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+    p { margin: 0 0 1rem; }
+    .lede { font-size: 1.1rem; }
+    .muted { color: var(--muted); font-size: 0.95rem; }
+    a { color: var(--link); }
+    nav { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ROS Home Nest</h1>
+    <p class="lede">
+      A personal home-automation client for one household Nest
+      thermostat. It uses Google Device Access (Smart Device
+      Management) so a local ROS&nbsp;2 node can read climate status
+      and apply mode, eco, fan, and setpoint commands.
+    </p>
+    <p class="muted">
+      This is not a public product or multi-customer service. Only the
+      operator of this household authorizes access.
+    </p>
+    <p>
+      The client requests the
+      <code>https://www.googleapis.com/auth/sdm.service</code>
+      scope. Thermostat data stays on the household machine and local
+      message bus. Nest cameras are not requested.
+    </p>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </main>
+</body>
+</html>
